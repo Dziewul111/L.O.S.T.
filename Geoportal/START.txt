@@ -1,0 +1,24 @@
+JAK POBIERAĆ ZDJĘCIA
+
+1. Kliknij dwukrotnie Uruchom.command.
+2. Otworzy się Terminal w tym folderze, z gotowym Pythonem.
+3. Wklej polecenie pobierania i naciśnij Enter.
+
+Przykład — fragment Warszawy:
+python pobierz_geoportal.py --bbox 21.00 52.22 21.02 52.24 --resolution 0.5 --output warszawa
+
+Zdjęcia znajdziesz w podfolderze warszawa w tym folderze.
+Dla innego miejsca zmień granice po --bbox i nazwę po --output.
+Kolejność granic: zachód południe wschód północ, w stopniach.
+Używaj kropek dziesiętnych. Rozdzielczość 0.5 to 0,5 m/piksel.
+Użyj nowej nazwy folderu przy następnym pobieraniu lub dodaj
+--overwrite, jeśli chcesz zastąpić poprzednie pliki.
+
+Sprawdzenie wielkości bez pobierania: dodaj --dry-run.
+Wyświetlenie pomocy: python pobierz_geoportal.py --help
+Zamknięcie sesji: exit
+
+Potrzebny jest internet. Pobierane obrazy to ortofotomapa Geoportalu.
+Nie zmieniaj nazwy ani położenia folderu Geoportal — środowisko
+Python ma zapisane ścieżki do jego obecnej lokalizacji.
+Szczegóły znajdziesz w README.md.
